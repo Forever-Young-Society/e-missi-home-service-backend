@@ -1,0 +1,88 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      context: .
+    image: web:1
+    ports:
+     - 80
+    environment:
+     - VIRTUAL_PORT=80
+     - MYSQL_DATABASE=${MYSQL_DATABASE}
+     - MYSQL_USER=${MYSQL_USER}
+     - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - ../:/var/www/html
+    depends_on:
+      - mysql
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: unless-stopped
+
+  web-scheduler:
+    build:
+      context: .
+    image: web:1
+    entrypoint: /bin/bash  /var/www/html/service-root.sh
+    environment:
+     - MYSQL_DATABASE=${MYSQL_DATABASE}
+     - MYSQL_USER=${MYSQL_USER}
+     - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - ../:/var/www/html
+    depends_on:
+      - mysql
+      - web
+    restart: unless-stopped
+    
+  mysql:
+    image: mysql:latest
+    volumes:
+      - ../:/var/www/html
+      - ../mysql:/var/lib/mysql
+    ports:
+      - 3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    healthcheck:
+      test: ["CMD", "mysqladmin", "--user=root", "--password=${MYSQL_ROOT_PASSWORD}", "--host=127.0.0.1", "ping", "--silent"]
+      interval: 2s
+      timeout: 10s
+      retries: 10
+    command: ["--default-authentication-plugin=mysql_native_password"]
+    restart: unless-stopped
+
+  lb:
+    image: imkulikov/nginx-sticky
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - web
+    ports:
+      - '82:82'
+    restart: unless-stopped      
+  memcached:
+    container_name: memcached
+    image: memcached:latest
+    ports:
+        - "11211"
+    restart: unless-stopped
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - 2021:80
+    environment:
+     - PMA_HOST=mysql
+     - PMA_PORT=3306
+     - PMA_USER=root
+     - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    depends_on:
+     - mysql
+    profiles: ["dev"] # only runs with dev profile
+
