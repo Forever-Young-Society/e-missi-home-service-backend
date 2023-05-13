@@ -1,0 +1,764 @@
+    /* Pop-up */
+    
+    #popUpDeal .modal-content {
+        border: none;
+        background: transparent;
+    }
+    
+    #popUpDeal .modal-content .close {
+        position: absolute;
+        right: -10px;
+        opacity: 1;
+        z-index: 1;
+        color: #fff;
+        font-weight: 400;
+        background: #222;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        top: -15px;
+        text-align: center;
+        text-shadow: none;
+    }
+    
+    #popUpDeal .modal-content .modal-body {
+        padding: 0;
+    }
+    
+    #popUpDeal .modal-dialog {
+        width: 100%;
+        max-width: 1000px;
+    }
+    
+    .pop-up-banner-box {
+        position: fixed;
+        bottom: -218px;
+        z-index: 9;
+        bottom: 0;
+        transition: .5s;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .pop-up-banner-box .black-friday-wrapper .triigerModal {
+        display: inline-block;
+    }
+    
+    .pop-up-banner-box .black-friday-wrapper .triigerModal img {
+        width: 380px;
+    }
+    
+    .pop-up-banner-box .pop-up-banner-button {
+        text-align: right;
+    }
+    
+    .pop-up-banner-box .pop-up-banner-button .hit-box {
+        border: none;
+        background: transparent;
+        position: absolute;
+        bottom: 0;
+        left: 495px;
+        width: 130px;
+    }
+    
+    .pop-up-banner-box .pop-up-banner-button .hit-box img {
+        width: 130px;
+    }
+    
+    .pop-up-banner-box.show-box {
+        left: -496px;
+        opacity: 1;
+        visibility: visible;
+        bottom: 90px;
+    }
+    
+    .pop-up-banner-box.show-box.showtopbox {
+        left: 0;
+    }
+    
+    @media ( max-width: 991px) {
+        #popUpDeal .modal-content .modal-body {
+            padding: 36px;
+        }
+        /*#popUpDeal .modal-content .close {
+            right: 23px;
+            top: 24px;
+        }*/
+    }
+    
+    @media ( max-width: 767.98px) {
+        .pop-up-banner-box .black-friday-wrapper .triigerModal img {
+            width: 300px;
+            transition: .5s;
+        }
+        .pop-up-banner-box.show-box.showtopbox .hit-box {
+            left: 294px;
+            width: 103px;
+            transition: .5s;
+        }
+        .pop-up-banner-box .pop-up-banner-button .hit-box {
+            width: 103px;
+            transition: .5s;
+        }
+        /*#popUpDeal .modal-content .close {
+            right: 23px;
+            top: 24px;
+        }*/
+        #popUpDeal .modal-content .modal-body {
+            padding: 36px;
+        }
+        .showtopbox .santa-box {
+            left: 50px!important;
+        }
+        .santa {
+            transform: scale(0.3)!important;
+        }
+        .santa-box {
+            left: -192px!important;
+        }
+    }
+    
+    @media ( max-width: 320px) {
+        #popUpDeal .modal-content .modal-body {
+            padding: 36px;
+        }
+        /*#popUpDeal .modal-content .close {
+            right: 23px;
+            top: 24px;
+        }*/
+    }
+    
+    @media ( max-width: 576px) {
+        #popUpDeal .modal-content .modal-body {
+            padding: 36px;
+        }
+        /*#popUpDeal .modal-content .close {
+            right: 23px;
+            top: 24px;
+        }*/
+    }
+    /* Pop-Up Ends */
+    
+    .santa {
+        width: 300px;
+        height: 400px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform-origin: bottom right;
+        transform: scale(0.4);
+    }
+    
+    .santa__content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .santa__head {
+        width: 150px;
+        height: 170px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+    }
+    
+    .santa__hat {
+        width: 100%;
+        height: 50%;
+        border-radius: 100% 100% 0 0;
+        background-color: #d00208ff;
+        top: 0;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+    }
+    
+    .santa__hat:before,
+    .santa__hat:after {
+        transition: all 0.2s ease;
+        content: "";
+        position: absolute;
+    }
+    
+    .santa__hat:before {
+        transform: rotate(27deg);
+        left: -41px;
+        bottom: -14px;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 60px solid #d00208ff;
+    }
+    
+    .santa__hat:after {
+        background-color: #d00208ff;
+        border-radius: 100%;
+        top: -8px;
+        left: -27px;
+        width: 116%;
+        height: 93px;
+        transform: rotate(-4deg);
+    }
+    
+    .santa__hat span {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .santa__hat span:before,
+    .santa__hat span:after {
+        transition: all 0.2s ease;
+        content: "";
+        position: absolute;
+        background-color: #f7f0f0;
+    }
+    
+    .santa__hat span:before {
+        border-radius: 10px;
+        bottom: -2px;
+        width: 120%;
+        height: 35px;
+    }
+    
+    .santa__hat span:after {
+        border-radius: 100%;
+        width: 35px;
+        height: 35px;
+        bottom: -35px;
+        left: -50px;
+    }
+    
+    .santa__face {
+        width: 100%;
+        height: 110%;
+        background-color: #ffdbbd;
+        position: absolute;
+        border-radius: 45%;
+        top: 10%;
+    }
+    
+    .santa__eyes {
+        width: 35%;
+        height: 20%;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .santa__eyes:before,
+    .santa__eyes:after {
+        transition: all 0.2s cubic-bezier(0.25, 0.1, 0.06, 1.38);
+        content: "";
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: solid 1px gray;
+        width: 35px;
+        height: 10px;
+        border-radius: 4px;
+        bottom: -7px;
+        left: -17px;
+    }
+    
+    .santa__eyes:after {
+        left: initial;
+        right: -17px;
+    }
+    
+    .santa__eye {
+        width: 10px;
+        height: 10px;
+        background-color: #333333;
+        border-radius: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: eyes 4s ease infinite;
+    }
+    
+    @keyframes eyes {
+        0% {
+            height: 10px;
+        }
+        90% {
+            height: 10px;
+        }
+        95% {
+            height: 0px;
+        }
+        100% {
+            height: 10px;
+        }
+    }
+    
+    .santa__eye:last-child {
+        left: initial;
+        right: 0;
+    }
+    
+    .santa__nose {
+        width: 12px;
+        height: 20px;
+        background-color: rgba(220, 70, 25, 0.15);
+        border-radius: 10px;
+        position: absolute;
+        top: 70%;
+        z-index: 2;
+    }
+    
+    .santa__nose:before {
+        transition: all 0.2s cubic-bezier(0.25, 0.1, 0.06, 1.38);
+        content: "";
+        position: absolute;
+        background-color: gray;
+        width: 14px;
+        height: 1px;
+        left: -1px;
+    }
+    
+    .santa__beard {
+        width: 120%;
+        height: 80%;
+        border-radius: 50%;
+        background-color: #f7f0f0;
+        position: absolute;
+        bottom: -26%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .santa__beard:before {
+        content: "";
+        position: absolute;
+        background-color: #ffdbbd;
+        width: 82%;
+        height: 60%;
+        border-radius: 100%;
+        top: -12px;
+    }
+    
+    .santa__moustache {
+        position: absolute;
+        width: 40%;
+        height: 20px;
+        top: 45%;
+        display: flex;
+        z-index: 2;
+        filter: drop-shadow(0px 2px 0px #dddddd);
+    }
+    
+    .santa__moustache:before,
+    .santa__moustache:after {
+        transition: all 0.3s ease;
+        content: "";
+        position: absolute;
+        background-color: #f7f0f0;
+        transform-origin: top right;
+        width: 55%;
+        height: 100%;
+        border-radius: 100% 0px;
+    }
+    
+    .santa__moustache:after {
+        border-radius: 0px 100%;
+        right: 0;
+        transform-origin: top left;
+    }
+    
+    .santa__mouth {
+        width: 28px;
+        height: 18px;
+        border-radius: 2px 2px 50% 50%;
+        background-color: #9f1c1c;
+        position: absolute;
+        bottom: 5px;
+    }
+    
+    .santa__body {
+        height: 55%;
+        background-color: #d00208ff;
+        position: absolute;
+        width: 90%;
+        top: 30%;
+        border-radius: 40% 40% 30% 30%;
+    }
+    
+    .santa__body:before {
+        content: "";
+        position: absolute;
+        background-color: #f7f0f0;
+        width: 100%;
+        height: 32px;
+        bottom: 20%;
+        border-radius: 10px;
+        transform: scalex(1.05);
+        z-index: 2;
+        left: 0px;
+    }
+    
+    .santa__belt {
+        width: 100%;
+        height: 24px;
+        background-color: #333333;
+        z-index: 1;
+        position: absolute;
+        bottom: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .santa__belt:before,
+    .santa__belt:after {
+        content: "";
+        position: absolute;
+        border-radius: 4px;
+    }
+    
+    .santa__belt:before {
+        width: 40px;
+        height: 100%;
+        border: solid 4px #f1c835;
+    }
+    
+    .santa__belt:after {
+        width: 24px;
+        height: 4px;
+        transform: translatex(16px);
+        background-color: #f1c835;
+    }
+    
+    .santa__arms {
+        width: 90%;
+        height: 110px;
+        top: 15%;
+        position: absolute;
+        display: flex;
+    }
+    
+    .santa__arm {
+        transition: all 0.4s ease;
+        width: 48px;
+        height: 100%;
+        background-color: #d00208ff;
+        position: absolute;
+        transform-origin: center bottom;
+        transform: rotate(-150deg);
+        left: 14px;
+        top: 20px;
+        border-radius: 0px 0px 40px 40px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .santa__arm:before {
+        content: "";
+        position: absolute;
+        background-color: #f7f0f0;
+        width: 125%;
+        height: 24px;
+        border-radius: 10px;
+    }
+    
+    .santa__arm:last-child {
+        left: initial;
+        right: 14px;
+        top: 20px;
+        transform-origin: center bottom;
+        transform: rotate(30deg) rotateY(180deg);
+        animation: arm 0.8s ease infinite alternate;
+    }
+    
+    @keyframes arm {
+        25% {
+            transform: rotate(50deg) rotateY(180deg);
+        }
+        50% {
+            transform: rotate(30deg) rotateY(180deg);
+        }
+    }
+    
+    .santa__hand {
+        width: 48px;
+        height: 56px;
+        background-color: #d00208ff;
+        position: absolute;
+        transform-origin: right bottom;
+        left: 0px;
+        top: -56px;
+        border-radius: 50% 50% 0px 0px;
+    }
+    
+    .santa__hand:before {
+        content: "";
+        position: absolute;
+        background-color: #d00208ff;
+        width: 16px;
+        height: 32px;
+        bottom: -2px;
+        right: -10px;
+        border-radius: 40px;
+        transform: rotate(45deg);
+    }
+    
+    .santa__legs {
+        width: 40%;
+        height: 50px;
+        bottom: 0px;
+        position: absolute;
+        display: flex;
+    }
+    
+    .santa__leg {
+        width: 48px;
+        height: 80%;
+        background-color: #d00208ff;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        transform-origin: top right;
+    }
+    
+    .santa__leg:before,
+    .santa__leg:after {
+        content: "";
+        position: absolute;
+    }
+    
+    .santa__leg:before {
+        background-color: #333333;
+        width: 150%;
+        height: 28px;
+        bottom: -25%;
+        right: 0;
+        border-radius: 40px 0px 20px 40px;
+    }
+    
+    .santa__leg:after {
+        background-color: #f7f0f0;
+        width: 130%;
+        height: 16px;
+        border-radius: 10px;
+        top: -10px;
+    }
+    
+    .santa__leg:last-child {
+        right: 0;
+        transform-origin: top left;
+    }
+    
+    .santa__leg:last-child:before {
+        right: initial;
+        left: 0;
+        border-radius: 0px 40px 40px 20px;
+    }
+    
+    .santa:hover .santa__content {
+        animation: santa 0.6s ease;
+    }
+    
+    @keyframes santa {
+        0% {
+            transform: translatey(0px);
+        }
+        50% {
+            transform: translatey(-20px);
+        }
+        100% {
+            transform: translatey(0px);
+        }
+    }
+    
+    .santa:hover .santa__eyes:before,
+    .santa:hover .santa__eyes:after {
+        transform: translateY(-6px);
+    }
+    
+    .santa:hover .santa__nose:before {
+        transform: translateY(-6px);
+    }
+    
+    .santa:hover .santa__moustache:before {
+        transform: rotate(10deg);
+    }
+    
+    .santa:hover .santa__moustache:after {
+        transform: rotate(-10deg);
+    }
+    
+    .santa:hover .santa__arm:first-child {
+        transform: rotate(-45deg);
+    }
+    
+    .santa:hover .santa__arm:last-child {
+        animation-play-state: paused;
+    }
+    
+    .santa:hover .santa__hat:before {
+        transform: rotate(40deg);
+        left: -48px;
+    }
+    
+    .santa:hover .santa__hat span:after {
+        left: -62px;
+        bottom: -30px;
+    }
+    
+    .santa:hover .santa__leg {
+        animation: leg1 0.6s ease;
+    }
+    
+    @keyframes leg1 {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(20deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    
+    .santa:hover .santa__leg:last-child {
+        animation: leg2 0.6s ease;
+    }
+    
+    @keyframes leg2 {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(-20deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    
+    .santa-box {
+        position: fixed;
+        bottom: 100px;
+        z-index: 1000;
+        z-index: 99999999999;
+        left: -152px;
+        transition: .5s;
+    }
+    
+    .santa img {
+        position: fixed;
+        bottom: -68px;
+        z-index: 1000;
+        z-index: 99999999999;
+        left: 264px;
+        transition: .5s;
+        width: 241px;
+    }
+    
+    .santa-box {
+        background-image: url(../../../themes/new/img/pop-up/snow.gif);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .showtopbox .santa-box {
+        left: 241px;
+    }
+    /* santa image css starts*/
+    
+    img.vert-move {
+        background-image: url(../images/snow.gif);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .showtopbox .santa-box {
+        left: 160px;
+    }
+    
+    img.vert-move {
+        -webkit-animation: mover 1s infinite alternate;
+        animation: mover 1s infinite alternate;
+    }
+    
+    img.vert-move {
+        -webkit-animation: mover 1s infinite alternate;
+        animation: mover 1s infinite alternate;
+    }
+    
+    @-webkit-keyframes mover {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+    
+    @keyframes mover {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+    
+    img.vert-move {
+        background-image: url(../images/snow.gif);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .showtopbox .santa-img-box {
+        left: 241px;
+    }
+    
+    img.vert-move {
+        -webkit-animation: mover 1s infinite alternate;
+        animation: mover 1s infinite alternate;
+    }
+    
+    img.vert-move {
+        -webkit-animation: mover 1s infinite alternate;
+        animation: mover 1s infinite alternate;
+    }
+    
+    @-webkit-keyframes mover {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+    
+    @keyframes mover {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+    /* santa image css ends*/
+#popUpDeal a {
+	position: relative;
+	display: block;
+	width: fit-content;
+	margin: 0 auto;
+}
+#popUpDeal a img {
+	max-height: calc( 100vh - 3.5rem );
+	max-width: 560px;
+	width: 100%;
+}

@@ -1,0 +1,35 @@
+.grid-view table th a[data-sort] {
+	position: relative;
+	display: block;
+	padding-right: 16px;
+}
+
+.grid-view table th a[data-sort]::before {
+	position: absolute;
+	content: "\f0ec";
+	right: 0;
+	font: normal normal normal 14px/1 FontAwesome;
+	transform: rotate(90deg);
+	opacity: 0.2;
+	top: 2px;
+}
+
+.grid-view table th a[data-sort].desc::before {
+	content: "\f161";
+	transform: unset;
+	opacity: 1;
+}
+
+.grid-view table th a[data-sort].asc::before {
+	content: "\f160";
+	transform: unset;
+	opacity: 1;
+}
+
+.grid-view table th a[data-sort]:hover::before {
+	opacity: 1
+}
+
+table tr th {
+	white-space: nowrap;
+}

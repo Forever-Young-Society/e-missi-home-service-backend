@@ -1,0 +1,16 @@
+{
+    "name": "jiwebtech/smtp",
+    "description": "SMTP to send emails ",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Shiv Charan Panjeta",
+            "email": "shiv@jiwebtech.com"
+        }
+    ],
+    "require": {
+		"php" : ">=8.0.0",
+		"yiisoft/yii2" : "*",
+		"yiisoft/yii2-symfonymailer" : "*"
+	}
+}

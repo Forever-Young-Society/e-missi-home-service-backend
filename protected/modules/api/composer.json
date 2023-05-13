@@ -1,0 +1,17 @@
+{
+    "name": "toxsltech/e-missi-home-service-yii2-1843",
+    "description": "api module",
+    "type": "library",
+	"license" : "commercial",
+    "authors": [
+        {
+            "name": "Shiv Charan Panjeta",
+            "email": "shiv@toxsltech.com"
+        }
+    ],
+    "require": {
+		"php" : ">=8.0.0",
+		"yiisoft/yii2" : "*",
+		"genxoft/yii2-oas3" : "*"
+	}
+}

@@ -1,0 +1,16 @@
+{
+    "name": "jiwebtech/scheduler",
+    "description": "Scheduler for cron jobs",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Shiv Charan Panjeta",
+            "email": "shiv@jiwebtech.com"
+        }
+    ],
+    "require": {
+		"php" : ">=8.0.0",
+		"yiisoft/yii2" : "*",
+		"dragonmantank/cron-expression" : "*"
+	}
+}
